@@ -3,27 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1404509426096FA300359D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404509326096FA300359D6D /* AppDelegate.swift */; };
 		1404509626096FA300359D6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404509526096FA300359D6D /* SceneDelegate.swift */; };
-		1404509826096FA300359D6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404509726096FA300359D6D /* ViewController.swift */; };
 		1404509B26096FA300359D6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1404509926096FA300359D6D /* Main.storyboard */; };
 		1404509D26096FA700359D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1404509C26096FA700359D6D /* Assets.xcassets */; };
 		140450A026096FA700359D6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1404509E26096FA700359D6D /* LaunchScreen.storyboard */; };
+		140450B8260AD59D00359D6D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450B7260AD59D00359D6D /* APIManager.swift */; };
+		140450BC260AD5F200359D6D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450BB260AD5F200359D6D /* APIConstants.swift */; };
+		140450BF260AD6CE00359D6D /* APIAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450BE260AD6CE00359D6D /* APIAccessToken.swift */; };
+		140450C2260ADC8C00359D6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450C1260ADC8C00359D6D /* LoginViewController.swift */; };
+		140450CE260B8A0F00359D6D /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450CD260B8A0E00359D6D /* SecureStore.swift */; };
+		140450D1260B8A2C00359D6D /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450D0260B8A2C00359D6D /* SecureStoreError.swift */; };
+		140450D4260B8A4F00359D6D /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450D3260B8A4F00359D6D /* SecureStoreQueryable.swift */; };
+		140450DA260BEB6700359D6D /* APITokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450D9260BEB6700359D6D /* APITokenManager.swift */; };
+		140450DF260BF17D00359D6D /* APINetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450DE260BF17D00359D6D /* APINetworkLogger.swift */; };
+		140450E4260C0B3000359D6D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450E3260C0B3000359D6D /* DesignableView.swift */; };
+		140450E8260C119400359D6D /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450E7260C119400359D6D /* APIRouter.swift */; };
+		140450EB260C155100359D6D /* APIRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450EA260C155100359D6D /* APIRequestInterceptor.swift */; };
+		140450EE260C1F9200359D6D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450ED260C1F9200359D6D /* StartViewController.swift */; };
+		94076A00A880CA211FD21D5C /* Pods_GistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1404509026096FA300359D6D /* GistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1404509326096FA300359D6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1404509526096FA300359D6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1404509726096FA300359D6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1404509A26096FA300359D6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1404509C26096FA700359D6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1404509F26096FA700359D6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140450A126096FA700359D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		140450B7260AD59D00359D6D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		140450BB260AD5F200359D6D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		140450BE260AD6CE00359D6D /* APIAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAccessToken.swift; sourceTree = "<group>"; };
+		140450C1260ADC8C00359D6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		140450CD260B8A0E00359D6D /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
+		140450D0260B8A2C00359D6D /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
+		140450D3260B8A4F00359D6D /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
+		140450D9260BEB6700359D6D /* APITokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokenManager.swift; sourceTree = "<group>"; };
+		140450DE260BF17D00359D6D /* APINetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetworkLogger.swift; sourceTree = "<group>"; };
+		140450E3260C0B3000359D6D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		140450E7260C119400359D6D /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		140450EA260C155100359D6D /* APIRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestInterceptor.swift; sourceTree = "<group>"; };
+		140450ED260C1F9200359D6D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		2749DD04A55CE45FB24476BC /* Pods-GistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.release.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.release.xcconfig"; sourceTree = "<group>"; };
+		563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2679F91720EDEA1F63D0EC /* Pods-GistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.debug.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94076A00A880CA211FD21D5C /* Pods_GistApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				1404509226096FA300359D6D /* GistApp */,
 				1404509126096FA300359D6D /* Products */,
+				6C4BF4D159AC96DA638BAC95 /* Pods */,
+				4C54C80886DFA8683C0E301D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,92 @@
 		1404509226096FA300359D6D /* GistApp */ = {
 			isa = PBXGroup;
 			children = (
+				140450DD260BEE3B00359D6D /* Model */,
+				140450B2260AD20300359D6D /* Networking */,
+				140450B1260AD1CD00359D6D /* SecureStore */,
+				140450E2260C0B0200359D6D /* Util */,
+				140450C4260ADC9600359D6D /* ViewController */,
 				1404509326096FA300359D6D /* AppDelegate.swift */,
 				1404509526096FA300359D6D /* SceneDelegate.swift */,
-				1404509726096FA300359D6D /* ViewController.swift */,
 				1404509926096FA300359D6D /* Main.storyboard */,
-				1404509C26096FA700359D6D /* Assets.xcassets */,
 				1404509E26096FA700359D6D /* LaunchScreen.storyboard */,
+				1404509C26096FA700359D6D /* Assets.xcassets */,
 				140450A126096FA700359D6D /* Info.plist */,
 			);
 			path = GistApp;
+			sourceTree = "<group>";
+		};
+		140450B1260AD1CD00359D6D /* SecureStore */ = {
+			isa = PBXGroup;
+			children = (
+				140450CD260B8A0E00359D6D /* SecureStore.swift */,
+				140450D0260B8A2C00359D6D /* SecureStoreError.swift */,
+				140450D3260B8A4F00359D6D /* SecureStoreQueryable.swift */,
+			);
+			path = SecureStore;
+			sourceTree = "<group>";
+		};
+		140450B2260AD20300359D6D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				140450B6260AD54C00359D6D /* Oauth */,
+				140450B7260AD59D00359D6D /* APIManager.swift */,
+				140450DE260BF17D00359D6D /* APINetworkLogger.swift */,
+				140450E7260C119400359D6D /* APIRouter.swift */,
+				140450EA260C155100359D6D /* APIRequestInterceptor.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		140450B6260AD54C00359D6D /* Oauth */ = {
+			isa = PBXGroup;
+			children = (
+				140450BB260AD5F200359D6D /* APIConstants.swift */,
+				140450BE260AD6CE00359D6D /* APIAccessToken.swift */,
+				140450D9260BEB6700359D6D /* APITokenManager.swift */,
+			);
+			path = Oauth;
+			sourceTree = "<group>";
+		};
+		140450C4260ADC9600359D6D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				140450C1260ADC8C00359D6D /* LoginViewController.swift */,
+				140450ED260C1F9200359D6D /* StartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		140450DD260BEE3B00359D6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		140450E2260C0B0200359D6D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				140450E3260C0B3000359D6D /* DesignableView.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		4C54C80886DFA8683C0E301D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C4BF4D159AC96DA638BAC95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B2679F91720EDEA1F63D0EC /* Pods-GistApp.debug.xcconfig */,
+				2749DD04A55CE45FB24476BC /* Pods-GistApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 140450A426096FA700359D6D /* Build configuration list for PBXNativeTarget "GistApp" */;
 			buildPhases = (
+				976358CB2CD2B235EAB8E635 /* [CP] Check Pods Manifest.lock */,
 				1404508C26096FA200359D6D /* Sources */,
 				1404508D26096FA200359D6D /* Frameworks */,
 				1404508E26096FA200359D6D /* Resources */,
+				CF36D1DC152B84E64768D2E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +242,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		976358CB2CD2B235EAB8E635 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GistApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF36D1DC152B84E64768D2E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1404508C26096FA200359D6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1404509826096FA300359D6D /* ViewController.swift in Sources */,
+				140450C2260ADC8C00359D6D /* LoginViewController.swift in Sources */,
+				140450B8260AD59D00359D6D /* APIManager.swift in Sources */,
+				140450DA260BEB6700359D6D /* APITokenManager.swift in Sources */,
+				140450D4260B8A4F00359D6D /* SecureStoreQueryable.swift in Sources */,
+				140450BC260AD5F200359D6D /* APIConstants.swift in Sources */,
+				140450EE260C1F9200359D6D /* StartViewController.swift in Sources */,
 				1404509426096FA300359D6D /* AppDelegate.swift in Sources */,
+				140450BF260AD6CE00359D6D /* APIAccessToken.swift in Sources */,
 				1404509626096FA300359D6D /* SceneDelegate.swift in Sources */,
+				140450EB260C155100359D6D /* APIRequestInterceptor.swift in Sources */,
+				140450E8260C119400359D6D /* APIRouter.swift in Sources */,
+				140450E4260C0B3000359D6D /* DesignableView.swift in Sources */,
+				140450CE260B8A0F00359D6D /* SecureStore.swift in Sources */,
+				140450DF260BF17D00359D6D /* APINetworkLogger.swift in Sources */,
+				140450D1260B8A2C00359D6D /* SecureStoreError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,39 +447,41 @@
 		};
 		140450A526096FA700359D6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B2679F91720EDEA1F63D0EC /* Pods-GistApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W8L47TG474;
+				DEVELOPMENT_TEAM = WDD8N4CRD3;
 				INFOPLIST_FILE = GistApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.systemsat.GistApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianfagundes.dggistapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		140450A626096FA700359D6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2749DD04A55CE45FB24476BC /* Pods-GistApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W8L47TG474;
+				DEVELOPMENT_TEAM = WDD8N4CRD3;
 				INFOPLIST_FILE = GistApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.systemsat.GistApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianfagundes.dggistapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
