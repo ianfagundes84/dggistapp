@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="1361" y="645"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="yhG-5h-PLe">
             <objects>
-                <viewController id="4KK-pc-HfB" sceneMemberID="viewController">
+                <viewController id="4KK-pc-HfB" customClass="StartViewController" customModule="GistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gm0-kv-TXM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,9 @@
                                         <real key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btEnter:" destination="4KK-pc-HfB" eventType="touchUpInside" id="RDa-Z5-X2v"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KAU-6U-afM"/>
@@ -88,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="-51.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Scanner View Controller-->
         <scene sceneID="R7n-a1-Q26">
             <objects>
-                <viewController id="Fc6-Pk-ZeA" sceneMemberID="viewController">
+                <viewController id="Fc6-Pk-ZeA" customClass="ScannerViewController" customModule="GistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E9P-la-FxR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,12 +105,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofl-iM-bu3">
+                                <rect key="frame" x="24" y="522" width="366" height="60"/>
+                                <color key="backgroundColor" name="main"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nkA-Ag-91r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Table View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mpt-aO-2nq" kind="show" id="hWH-MB-5qM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XH3-lF-97k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jVT-yd-F89" firstAttribute="centerX" secondItem="E9P-la-FxR" secondAttribute="centerX" id="2tS-6P-7ZO"/>
+                            <constraint firstItem="XH3-lF-97k" firstAttribute="trailing" secondItem="Ofl-iM-bu3" secondAttribute="trailing" constant="24" id="S5T-Km-eHP"/>
+                            <constraint firstItem="Ofl-iM-bu3" firstAttribute="leading" secondItem="XH3-lF-97k" secondAttribute="leading" constant="24" id="S5o-cb-zJB"/>
                             <constraint firstItem="jVT-yd-F89" firstAttribute="centerY" secondItem="E9P-la-FxR" secondAttribute="centerY" id="ac3-1X-ffC"/>
+                            <constraint firstItem="XH3-lF-97k" firstAttribute="bottom" secondItem="Ofl-iM-bu3" secondAttribute="bottom" constant="280" id="sSx-dB-68T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2jM-Hh-ldS"/>
@@ -139,6 +164,7 @@
                             <outlet property="delegate" destination="mpt-aO-2nq" id="FQg-s2-71k"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="PIg-uL-qQX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZK-eo-JyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

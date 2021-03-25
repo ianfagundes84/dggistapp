@@ -10,11 +10,14 @@ import Alamofire
 
 enum APIRouter {
     case getAccessToken(String)
+    case getComments
     
     var baseURL: String {
         switch self {
         case .getAccessToken:
             return "https://github.com"
+        case .getComments:
+            return "https://api.github.com"
         }
     }
     
@@ -22,6 +25,8 @@ enum APIRouter {
         switch self {
         case .getAccessToken:
             return "/login/oauth/access_token"
+        case .getComments:
+            return "/gists/\(APIConstants.gistID)/comments"
         }
     }
     
@@ -29,6 +34,8 @@ enum APIRouter {
         switch self {
         case .getAccessToken:
             return .post
+        case .getComments:
+            return .get
         }
     }
     
@@ -40,6 +47,8 @@ enum APIRouter {
                 "client_secret": APIConstants.clientSecret,
                 "code": accessCode
             ]
+        case .getComments:
+            return [:]
         }
     }
 }
@@ -54,7 +63,7 @@ extension APIRouter: URLRequestConvertible {
             request = try URLEncodedFormParameterEncoder().encode(parameters, into: request)
         } else if method == .post {
             request = try JSONParameterEncoder().encode(parameters, into: request)
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
         }
         return request
     }

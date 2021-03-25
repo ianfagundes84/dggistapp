@@ -9,21 +9,28 @@ import UIKit
 
 class StartViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//computed variable to recovery token and save user status
+    var isLoggedIn: Bool {
+        if APITokenManager.shared.fetchAccessToken() != nil {
+            return true
+        }
+        return false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        APITokenManager.shared.clearAccessToken()
     }
-    */
-
+    
+//Login status is tested when button is clicked
+    @IBAction func btEnter(_ sender: UIButton) {
+        if isLoggedIn {
+            self.performSegue(withIdentifier: "scannerSegue", sender: nil)
+        } else {
+            self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        }
+    }
 }
+
+
+

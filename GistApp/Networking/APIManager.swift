@@ -27,21 +27,26 @@ class APIManager {
     
     func getAccessToken(accessCode: String, completion: @escaping (Bool) -> Void) {
         
-        let headers: HTTPHeaders = ["Accept": "application/json"]
-        
-        let parameters = [
-            "client_id": APIConstants.clientID,
-            "client_secret": APIConstants.clientSecret,
-            "code": accessCode
-        ]
-        
-        sessionManager.request("https://github.com/login/oauth/access_token", method: .post, parameters: parameters, headers: headers)
+        sessionManager.request(APIRouter.getAccessToken(accessCode))
             .responseDecodable(of: APIAccessToken.self) { response in
                 guard let credencial = response.value else {
                     return completion(false)
                 }
                 APITokenManager.shared.saveAccessToken(apiToken: credencial)
                 print(credencial)
+                completion(true)
+            }
+    }
+    
+    func getComments(completion: @escaping (Bool) -> Void) {
+        
+        sessionManager.request(APIRouter.getComments)
+            .responseDecodable(of: Comment.self) { response in
+                print(response)
+                guard let comment = response.value else {
+                    return completion(false)
+                }
+//                print(gistData)
                 completion(true)
             }
     }

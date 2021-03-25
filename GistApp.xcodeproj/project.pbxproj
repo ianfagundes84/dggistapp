@@ -25,6 +25,9 @@
 		140450E8260C119400359D6D /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450E7260C119400359D6D /* APIRouter.swift */; };
 		140450EB260C155100359D6D /* APIRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450EA260C155100359D6D /* APIRequestInterceptor.swift */; };
 		140450EE260C1F9200359D6D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450ED260C1F9200359D6D /* StartViewController.swift */; };
+		140450F1260C2B4600359D6D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450F0260C2B4600359D6D /* ScannerViewController.swift */; };
+		140450F4260CEF3D00359D6D /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450F3260CEF3D00359D6D /* CommentsTableViewController.swift */; };
+		140450F8260CF74300359D6D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450F7260CF74300359D6D /* Comment.swift */; };
 		94076A00A880CA211FD21D5C /* Pods_GistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		140450E7260C119400359D6D /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		140450EA260C155100359D6D /* APIRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestInterceptor.swift; sourceTree = "<group>"; };
 		140450ED260C1F9200359D6D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		140450F0260C2B4600359D6D /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		140450F3260CEF3D00359D6D /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		140450F7260CF74300359D6D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		2749DD04A55CE45FB24476BC /* Pods-GistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.release.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.release.xcconfig"; sourceTree = "<group>"; };
 		563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2679F91720EDEA1F63D0EC /* Pods-GistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.debug.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +145,8 @@
 			children = (
 				140450C1260ADC8C00359D6D /* LoginViewController.swift */,
 				140450ED260C1F9200359D6D /* StartViewController.swift */,
+				140450F0260C2B4600359D6D /* ScannerViewController.swift */,
+				140450F3260CEF3D00359D6D /* CommentsTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 		140450DD260BEE3B00359D6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				140450F7260CF74300359D6D /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,9 +300,11 @@
 			files = (
 				140450C2260ADC8C00359D6D /* LoginViewController.swift in Sources */,
 				140450B8260AD59D00359D6D /* APIManager.swift in Sources */,
+				140450F8260CF74300359D6D /* Comment.swift in Sources */,
 				140450DA260BEB6700359D6D /* APITokenManager.swift in Sources */,
 				140450D4260B8A4F00359D6D /* SecureStoreQueryable.swift in Sources */,
 				140450BC260AD5F200359D6D /* APIConstants.swift in Sources */,
+				140450F4260CEF3D00359D6D /* CommentsTableViewController.swift in Sources */,
 				140450EE260C1F9200359D6D /* StartViewController.swift in Sources */,
 				1404509426096FA300359D6D /* AppDelegate.swift in Sources */,
 				140450BF260AD6CE00359D6D /* APIAccessToken.swift in Sources */,
@@ -304,6 +315,7 @@
 				140450CE260B8A0F00359D6D /* SecureStore.swift in Sources */,
 				140450DF260BF17D00359D6D /* APINetworkLogger.swift in Sources */,
 				140450D1260B8A2C00359D6D /* SecureStoreError.swift in Sources */,
+				140450F1260C2B4600359D6D /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
