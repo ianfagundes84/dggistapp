@@ -11,12 +11,18 @@ import Alamofire
 enum APIRouter {
     case getAccessToken(String)
     case getComments
+    case publishComment(commentText:String)
+    case updateComment((commentText: String, commentID: String))
+    case deleteComment(commentID: String)
     
     var baseURL: String {
         switch self {
         case .getAccessToken:
             return "https://github.com"
-        case .getComments:
+        case .getComments,
+             .publishComment,
+             .updateComment,
+             .deleteComment:
             return "https://api.github.com"
         }
     }
@@ -25,17 +31,27 @@ enum APIRouter {
         switch self {
         case .getAccessToken:
             return "/login/oauth/access_token"
-        case .getComments:
+        case .getComments,
+             .publishComment:
             return "/gists/\(APIConstants.gistID)/comments"
+        case .deleteComment(let commentID):
+            return "/gists/\(APIConstants.gistID)/comments/\(commentID)"
+        case .updateComment(let tuple):
+            return "/gists/\(APIConstants.gistID)/comments/\(tuple.1)"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getAccessToken:
+        case .getAccessToken,
+             .publishComment:
             return .post
+        case .updateComment:
+            return .patch
         case .getComments:
             return .get
+        case .deleteComment:
+            return .delete
         }
     }
     
@@ -47,8 +63,13 @@ enum APIRouter {
                 "client_secret": APIConstants.clientSecret,
                 "code": accessCode
             ]
-        case .getComments:
+        case .getComments,
+             .deleteComment:
             return [:]
+        case .publishComment(let commentText):
+            return ["body": commentText]
+        case .updateComment((let tuple)):
+            return ["body": tuple.0]
         }
     }
 }
@@ -61,7 +82,7 @@ extension APIRouter: URLRequestConvertible {
         
         if method == .get {
             request = try URLEncodedFormParameterEncoder().encode(parameters, into: request)
-        } else if method == .post {
+        } else if method == .post || method == .patch || method == .delete {
             request = try JSONParameterEncoder().encode(parameters, into: request)
             request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
         }

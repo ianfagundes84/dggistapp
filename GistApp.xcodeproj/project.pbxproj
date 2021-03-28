@@ -28,6 +28,8 @@
 		140450F1260C2B4600359D6D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450F0260C2B4600359D6D /* ScannerViewController.swift */; };
 		140450F4260CEF3D00359D6D /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450F3260CEF3D00359D6D /* CommentsTableViewController.swift */; };
 		140450F8260CF74300359D6D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140450F7260CF74300359D6D /* Comment.swift */; };
+		1404510D260E70DF00359D6D /* CommentViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404510C260E70DF00359D6D /* CommentViewTableViewCell.swift */; };
+		14045128260EDEC100359D6D /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14045127260EDEC100359D6D /* ViewControllerExtension.swift */; };
 		94076A00A880CA211FD21D5C /* Pods_GistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		140450F0260C2B4600359D6D /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		140450F3260CEF3D00359D6D /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		140450F7260CF74300359D6D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		1404510C260E70DF00359D6D /* CommentViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewTableViewCell.swift; sourceTree = "<group>"; };
+		14045127260EDEC100359D6D /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		2749DD04A55CE45FB24476BC /* Pods-GistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.release.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.release.xcconfig"; sourceTree = "<group>"; };
 		563F9DAD366A1204FDFDBDDA /* Pods_GistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2679F91720EDEA1F63D0EC /* Pods-GistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.debug.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				140450B1260AD1CD00359D6D /* SecureStore */,
 				140450E2260C0B0200359D6D /* Util */,
 				140450C4260ADC9600359D6D /* ViewController */,
+				14045111260E710F00359D6D /* View */,
 				1404509326096FA300359D6D /* AppDelegate.swift */,
 				1404509526096FA300359D6D /* SceneDelegate.swift */,
 				1404509926096FA300359D6D /* Main.storyboard */,
@@ -162,9 +167,26 @@
 		140450E2260C0B0200359D6D /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				140450FC260D2C6500359D6D /* Extension */,
 				140450E3260C0B3000359D6D /* DesignableView.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		140450FC260D2C6500359D6D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14045127260EDEC100359D6D /* ViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		14045111260E710F00359D6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1404510C260E70DF00359D6D /* CommentViewTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4C54C80886DFA8683C0E301D /* Frameworks */ = {
@@ -306,6 +328,7 @@
 				140450BC260AD5F200359D6D /* APIConstants.swift in Sources */,
 				140450F4260CEF3D00359D6D /* CommentsTableViewController.swift in Sources */,
 				140450EE260C1F9200359D6D /* StartViewController.swift in Sources */,
+				14045128260EDEC100359D6D /* ViewControllerExtension.swift in Sources */,
 				1404509426096FA300359D6D /* AppDelegate.swift in Sources */,
 				140450BF260AD6CE00359D6D /* APIAccessToken.swift in Sources */,
 				1404509626096FA300359D6D /* SceneDelegate.swift in Sources */,
@@ -316,6 +339,7 @@
 				140450DF260BF17D00359D6D /* APINetworkLogger.swift in Sources */,
 				140450D1260B8A2C00359D6D /* SecureStoreError.swift in Sources */,
 				140450F1260C2B4600359D6D /* ScannerViewController.swift in Sources */,
+				1404510D260E70DF00359D6D /* CommentViewTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,13 +488,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDD8N4CRD3;
+				DEVELOPMENT_TEAM = W8L47TG474;
 				INFOPLIST_FILE = GistApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianfagundes.dggistapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.systemsat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -484,13 +508,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDD8N4CRD3;
+				DEVELOPMENT_TEAM = W8L47TG474;
 				INFOPLIST_FILE = GistApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianfagundes.dggistapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.systemsat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
