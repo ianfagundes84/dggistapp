@@ -7,14 +7,33 @@
 
 import UIKit
 
+protocol ScannerProtocol: class {
+    func restartCaptureSession()
+}
+
 class CommentsTableViewController: UITableViewController {
     
     var comments: Comment = []
     let shared = APIManager.shared
     
+    weak var reference: ScannerProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customizeNavBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            reference?.restartCaptureSession()
+        }
     }
     
     // MARK: - Table view data source
@@ -42,12 +61,13 @@ class CommentsTableViewController: UITableViewController {
         return .none
     }
     
+    //MARK: - Edit Delete Swipe
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let commentIndex = comments[indexPath.row].id
         
         let editComment = UIContextualAction(style: .normal, title: "Edit") { [weak self] (action, view, completionHandler)  in
-            self?.handleEditComment(for: commentIndex)
+            self?.handleEditComment(for: commentIndex, index: indexPath.row)
             completionHandler(true)
         }
         editComment.backgroundColor = .systemIndigo
@@ -69,12 +89,14 @@ class CommentsTableViewController: UITableViewController {
         
         return swipeActions
     }
-    //TODO: AddComment
+    
+    //MARK: - Add a comment
     @IBAction func addComment(_ sender: UIBarButtonItem) {
         let ac = UIAlertController(title: "Comment", message: "Leave your contribution for this gist", preferredStyle: .alert)
         ac.addTextField()
         let sendCommentAction = UIAlertAction(title: "Send", style: .default) { [unowned ac, weak self] _ in
             if let comment = ac.textFields![0].text {
+                
                 print(comment)
                 self?.shared.publishComment(commentText: comment) { result in
                     switch result {
@@ -92,14 +114,15 @@ class CommentsTableViewController: UITableViewController {
         
         ac.addAction(cancelAction)
         ac.addAction(sendCommentAction)
-    
+        
         present(ac, animated: true)
     }
 }
 
-//Delegate handler region
+//MARK: - Handler Delegate
 extension CommentsTableViewController {
     
+    //MARK: - Handle move to trash
     private func handleMoveToTrash(for commentIndex: Int, completion: @escaping (Bool) -> Void) {
         print("Moved to trash - \(commentIndex)")
         shared.deleteComment(commentIndex: "\(commentIndex)") { status in
@@ -113,16 +136,24 @@ extension CommentsTableViewController {
         }
     }
     
-    private func handleEditComment(for commentIndex: Int) {
+    //MARK: - Handle edit comment
+    private func handleEditComment(for commentIndex: Int, index: Int) {
         print("Edit comment -  \(commentIndex)")
         let ac = UIAlertController(title: "Edit box", message: "Edit your comment for this gist", preferredStyle: .alert)
-        ac.addTextField()
+        ac.addTextField(configurationHandler: { tf in
+            tf.placeholder = "\(self.comments[index].body)"
+        })
         let editCommentAction = UIAlertAction(title: "Save", style: .default) { [unowned ac, weak self] _ in
             if let commentBody = ac.textFields![0].text {
                 self?.shared.updateComment(commentText: commentBody, commentID: "\(commentIndex)") { result in
                     switch result {
                     case .success(let commentElement):
-                        let teste = self?.comments.enumerated().filter { $0.element.id == commentIndex }
+                        //TODO: upgrade to higher order function
+                        for (index, element) in self!.comments.enumerated() {
+                            if element.id == commentElement.id {
+                                self?.comments[index] = commentElement
+                            }
+                        }
                         self?.tableView.reloadData()
                     case .failure(let error):
                         print(error.localizedDescription)
@@ -135,7 +166,23 @@ extension CommentsTableViewController {
         
         ac.addAction(cancelAction)
         ac.addAction(editCommentAction)
-    
+        
         present(ac, animated: true)
+    }
+}
+
+extension CommentsTableViewController {
+    private func customizeNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .systemIndigo
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }

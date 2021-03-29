@@ -7,17 +7,29 @@
 
 import UIKit
 import AuthenticationServices
+import Lottie
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var animationView: AnimationView!
+    
     var webAuthSession: ASWebAuthenticationSession?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getAuthTokenWithWebLogin()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startAnimation()
+    }
+    
+    func startAnimation() {
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.5
+        animationView.play()
     }
     
     func getAuthTokenWithWebLogin() {
@@ -46,6 +58,7 @@ class LoginViewController: UIViewController {
                 if !isSuccess {
                     print("Error obtaining token")
                 }
+                animationView.stop()
                 navigationController?.popViewController(animated: true)
             }
         }

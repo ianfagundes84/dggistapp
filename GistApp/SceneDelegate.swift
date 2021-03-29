@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //TODO: Delete this:
 //        if let windowScene = scene as? UIWindowScene {
 //            let window = UIWindow(windowScene: windowScene)
-//            window.rootViewController = CommentsTableViewController()
+//            window.rootViewController = ScannerViewController()
 //            self.window = window
 //            window.makeKeyAndVisible()
 //        }

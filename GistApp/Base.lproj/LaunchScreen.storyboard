@@ -16,27 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LaunchScreen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-MS-gcy">
-                                <rect key="frame" x="132.5" y="433.5" width="149" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gistLaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="9hh-ji-Mks">
+                                <rect key="frame" x="30" y="328" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9hh-ji-Mks" secondAttribute="height" multiplier="1:1" id="gve-wt-b7X"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave your contribution with:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs5-T9-qoa">
+                                <rect key="frame" x="30" y="706" width="354" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dg gist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bu5-QH-EuR">
+                                <rect key="frame" x="30" y="743" width="354" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EPW-MS-gcy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7kZ-Jp-LgY"/>
-                            <constraint firstItem="EPW-MS-gcy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dGR-om-6xZ"/>
+                            <constraint firstItem="bu5-QH-EuR" firstAttribute="leading" secondItem="Cs5-T9-qoa" secondAttribute="leading" id="5Wf-Nm-IMF"/>
+                            <constraint firstItem="bu5-QH-EuR" firstAttribute="top" secondItem="Cs5-T9-qoa" secondAttribute="bottom" constant="20" id="6yt-UH-oZT"/>
+                            <constraint firstItem="Cs5-T9-qoa" firstAttribute="top" secondItem="9hh-ji-Mks" secondAttribute="bottom" constant="24" id="Asv-fm-IAl"/>
+                            <constraint firstItem="Cs5-T9-qoa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GR0-JK-DBJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9hh-ji-Mks" secondAttribute="bottom" constant="180" id="H8q-v2-EJo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cs5-T9-qoa" secondAttribute="trailing" constant="30" id="ShG-Qm-vJ7"/>
+                            <constraint firstItem="9hh-ji-Mks" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ufb-jt-z9r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9hh-ji-Mks" secondAttribute="trailing" constant="30" id="X4B-6y-kBD"/>
+                            <constraint firstItem="9hh-ji-Mks" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nH9-UZ-urT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bu5-QH-EuR" secondAttribute="trailing" constant="30" id="x3z-51-hJi"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="242"/>
+            <point key="canvasLocation" x="-233.33333333333334" y="241.74107142857142"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gistLaunchScreen" width="374.5" height="320"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
