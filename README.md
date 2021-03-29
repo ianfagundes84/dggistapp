@@ -48,6 +48,7 @@ Very Important
 
 ## Usage samples
 ![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/launching.gif?raw=true)
+![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/auth.gif?raw=true)
 
 ## Support
 
