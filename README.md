@@ -45,13 +45,8 @@ Now you can clean and rebuild your project, all previously imported dependencies
 
 ## Very Important
 Target plataform is 12.0 above
-URL to be scanned 
-[label](https://gist.github.com/4aee2ca2fadc06e165ac7c6a65a16c33.git)
-This [website (https://stackoverflow.com)][website] is awesome.
 
-You will never use anything else than this [website].
-
-Check out <https://stackoverflow.com> for more fun.
+Check out <https://gist.github.com/4aee2ca2fadc06e165ac7c6a65a16c33.git> URL to be scanned.
 
 [website]: https://stackoverflow.com
 
