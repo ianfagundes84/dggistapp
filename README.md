@@ -55,7 +55,13 @@ Very Important
 
 ![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/camera.gif?raw=true)
 
+![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/scannerok.gif?raw=true)
+
 ![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/update.gif?raw=true)
+
+![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/edit.gif?raw=true)
+
+![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/delete.gif?raw=true)
 
 ## Support
 
