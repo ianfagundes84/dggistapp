@@ -45,7 +45,8 @@ Now you can clean and rebuild your project, all previously imported dependencies
 
 Very Important
 :   target plataform is 12.0 above
-:   URL to be scanned https://gist.github.com/4aee2ca2fadc06e165ac7c6a65a16c33.git
+:   URL to be scanned 
+[label](https://gist.github.com/4aee2ca2fadc06e165ac7c6a65a16c33.git)
 
 ## Usage samples
 ![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/launching.gif?raw=true)
