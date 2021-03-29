@@ -53,6 +53,8 @@ Very Important
 
 ![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/logged.gif?raw=true)
 
+![alt-text](https://github.com/ianfagundes84/dggistapp/blob/main/camera.gif?raw=true)
+
 
 ## Support
 
